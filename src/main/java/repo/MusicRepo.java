@@ -1,6 +1,7 @@
 package repo;
 
 import entity.Music;
+import exception.CustomException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,12 +26,12 @@ public class MusicRepo {
         return musicRepo;
     }
 
-    public Music getByName(String name){
+    public Music getByName(String name) throws CustomException {
+        Optional<Music> getMusic = getMusicByName(name);
 
-        Optional<Music> getMusic = musicList.stream().filter(music -> music.getName().equals(name)).findFirst();
-
+        //Check music exist
         if (getMusic.isEmpty()){
-            return null;
+            throw new CustomException("music not found",2);
         }
         return getMusic.get();
     }
@@ -39,7 +40,15 @@ public class MusicRepo {
         return musicList;
     }
 
-    public void insert(Music music){
+    public void insert(Music music) throws CustomException {
+        //Check music exist
+        if(!getMusicByName(music.getName()).isEmpty()){
+            throw new CustomException("music already exist",2);
+        }
         musicList.add(music);
+    }
+
+    private Optional<Music> getMusicByName(String name){
+        return musicList.stream().filter(music -> music.getName().equals(name)).findFirst();
     }
 }
