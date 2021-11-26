@@ -1,7 +1,10 @@
-### Discord Music Bot
+### Discord Music discord.music.bot.Bot
 
 ----
-This we project we developed by using java 
+This we project we developed by using java
+
+#### Command
+
 
 #### Library
 
