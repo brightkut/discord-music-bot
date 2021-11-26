@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp target/classes:discord/* discord.music.Bot
+web: java -jar target/discord-music-bot-1.0-SNAPSHOT.jar
