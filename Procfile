@@ -1,2 +1,3 @@
-web: mvn exec:java -Dexec.mainClass="discord.music.bot.Bot"
+web: java -jar ./target/discord-music-bot-1.0-SNAPSHOT.jar
+
 

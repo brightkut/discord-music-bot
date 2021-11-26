@@ -73,11 +73,13 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>1.2.1</version>
+                <artifactId>maven-jar-plugin</artifactId>
                 <configuration>
-                    <mainClass>discord.music.bot.Bot</mainClass>
+                    <archive>
+                        <manifest>
+                            <mainClass>discord.music.bot.Bot</mainClass>
+                        </manifest>
+                    </archive>
                 </configuration>
             </plugin>
         </plugins>
