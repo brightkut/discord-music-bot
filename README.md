@@ -5,11 +5,15 @@ The project is about discord music bot that you can add and play the music with 
 
 ### Prerequisite
 
+---
+
 - Java 11
 - Maven
 
 
 ### Bot Command
+
+---
 `!help` for explain the other command usage: `!help <command>`
 
 `!ping` for check ping of discord server , usage: `!ping`
@@ -28,6 +32,8 @@ The project is about discord music bot that you can add and play the music with 
 
 
 ### Deploy Step
+
+---
 
 1. Clone git repo to AWS EC2
 2. Use `mvn clean install` to build the jar file
@@ -48,10 +54,13 @@ ENTRYPOINT ["java","-jar","/app.jar"]
 ```
 
 4. Build the Dockerfile usage: `sudo docker build -t discord-music-bot-img .`
+
 5. Run the container usage: `sudo docker run -d --name discord-music-bot-container discord-music-bot-img` 
 
 
 #### Library
+
+---
 
 [Discord bot](https://github.com/Discord4J/Discord4J) ( Library for implemented bot )
 
