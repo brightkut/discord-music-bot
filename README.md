@@ -1,9 +1,14 @@
 # Discord Music Bot
 
-----
+
 The project is about discord music bot that you can add and play the music with comfortable feature. we developed the bot by java 
 
----
+### Prerequisite
+
+- Java 11
+- Maven
+
+
 ### Bot Command
 `!help` for explain the other command usage: `!help <command>`
 
@@ -21,7 +26,7 @@ The project is about discord music bot that you can add and play the music with 
 
 `!get` for get all list music and playlist name , usage: `!get`
 
----
+
 ### Deploy Step
 
 1. Clone git repo to AWS EC2
@@ -45,11 +50,9 @@ ENTRYPOINT ["java","-jar","/app.jar"]
 4. Build the Dockerfile usage: `sudo docker build -t discord-music-bot-img .`
 5. Run the container usage: `sudo docker run -d --name discord-music-bot-container discord-music-bot-img` 
 
----
+
 #### Library
 
 [Discord bot](https://github.com/Discord4J/Discord4J) ( Library for implemented bot )
 
 [Java Discord API](https://github.com/DV8FromTheWorld/JDA) ( Library for implemented bot )
-
-F
